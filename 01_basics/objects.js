@@ -81,3 +81,16 @@ const users = [
 // console.log(Object.entries(users));
 
 // console.log(insta.hasOwnProperty('isLoggedIn'));
+
+//  Object De-structure
+
+const course = {
+    coursename: 'Javascript',
+    courseprice: 999,
+    courseteacher: 'Zohaib'
+}
+// console.log(course.courseTeacher);
+
+const {courseteacher: teacher} = course
+// console.log(teacher);
+
