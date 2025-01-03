@@ -45,3 +45,34 @@ let newNums = numbers.map((nums) => nums * 10)
                      .map((nums) => nums + 1)
                      .filter((nums) => nums >= 50)
 // console.log(newNums);
+
+/************************** Reducer *************************/
+
+const myNums = [1, 2, 3, 4, 5, 6]
+
+const myTotal = myNums.reduce(function (acc, currval) {
+    console.log(`acc: ${acc} and currval: ${currval}`);
+    return acc + currval
+}, 0)
+
+// const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
+
+console.log(myTotal);
+
+const items = [
+  { name: "Laptop", price: 60000 },
+  { name: "Mechanical Keyboard", price: 4500 },
+  { name: "Gaming Mouse", price: 2000 },
+  { name: "Monitor", price: 15000 },
+  { name: "External Hard Drive", price: 5000 },
+  { name: "Graphics Card", price: 25000 },
+  { name: "Processor", price: 20000 },
+  { name: "RAM (16GB)", price: 8000 },
+  { name: "Motherboard", price: 12000 },
+  { name: "Headphones", price: 3000 }
+];
+
+const itemsBill = items.reduce( (acc, items) => {
+  return acc + items.price
+}, 0)
+console.log(itemsBill);
